@@ -1,0 +1,8 @@
+{
+  "name": "@momentum-design/assets-icons",
+  "packageManager": "yarn@3.2.1",
+  "scripts": {
+    "start": "echo \"no script initialized\"",
+    "test": "echo \"no script initialized\""
+  }
+}

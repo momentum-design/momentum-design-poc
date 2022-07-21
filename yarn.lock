@@ -40,6 +40,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lit/reactive-element@npm:^1.3.0":
+  version: 1.3.3
+  resolution: "@lit/reactive-element@npm:1.3.3"
+  checksum: 99dd52fe71972601aba504ebbcc77de7e9acdf3387891de980f1df3558593d6acf3b497f160ae20b420ee943effdb3e88598fa93e043d126e34a25a30125051e
+  languageName: node
+  linkType: hard
+
+"@momentum-design/assets-icons@workspace:packages/assets/icons":
+  version: 0.0.0-use.local
+  resolution: "@momentum-design/assets-icons@workspace:packages/assets/icons"
+  languageName: unknown
+  linkType: soft
+
+"@momentum-design/assets-illustrations@workspace:packages/assets/illustrations":
+  version: 0.0.0-use.local
+  resolution: "@momentum-design/assets-illustrations@workspace:packages/assets/illustrations"
+  languageName: unknown
+  linkType: soft
+
+"@momentum-design/assets-tokens@workspace:packages/assets/tokens":
+  version: 0.0.0-use.local
+  resolution: "@momentum-design/assets-tokens@workspace:packages/assets/tokens"
+  languageName: unknown
+  linkType: soft
+
+"@momentum-design/components-provider@workspace:packages/components/provider":
+  version: 0.0.0-use.local
+  resolution: "@momentum-design/components-provider@workspace:packages/components/provider"
+  dependencies:
+    lit: ^2.2.7
+  languageName: unknown
+  linkType: soft
+
+"@types/trusted-types@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@types/trusted-types@npm:2.0.2"
+  checksum: 3371eef5f1c50e1c3c07a127c1207b262ba65b83dd167a1c460fc1b135a3fb0c97b9f508efebd383f239cc5dd5b7169093686a692a501fde9c3f7208657d9b0d
+  languageName: node
+  linkType: hard
+
 "acorn-jsx@npm:^5.3.2":
   version: 5.3.2
   resolution: "acorn-jsx@npm:5.3.2"
@@ -515,6 +555,36 @@ __metadata:
     prelude-ls: ^1.2.1
     type-check: ~0.4.0
   checksum: 12c5021c859bd0f5248561bf139121f0358285ec545ebf48bb3d346820d5c61a4309535c7f387ed7d84361cf821e124ce346c6b7cef8ee09a67c1473b46d0fc4
+  languageName: node
+  linkType: hard
+
+"lit-element@npm:^3.2.0":
+  version: 3.2.1
+  resolution: "lit-element@npm:3.2.1"
+  dependencies:
+    "@lit/reactive-element": ^1.3.0
+    lit-html: ^2.2.0
+  checksum: ab7db147b0679651d546399d0ae0173b3f48c319d98bb9df5bbc4ac8afc57d2894eeb1aceee7c280659483b3ad1e3f16bb00b71c2f354f132e88cb00bdf80609
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^2.2.0":
+  version: 2.2.6
+  resolution: "lit-html@npm:2.2.6"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: be0dacad92f21d1b3702616beecd73cf2dc0f73fed0c5985841a374615d2a185c62960438555620a0cfd089d99bfa2c350d8054b8d8790b2b3173c8dc93993bc
+  languageName: node
+  linkType: hard
+
+"lit@npm:^2.2.7":
+  version: 2.2.7
+  resolution: "lit@npm:2.2.7"
+  dependencies:
+    "@lit/reactive-element": ^1.3.0
+    lit-element: ^3.2.0
+    lit-html: ^2.2.0
+  checksum: fcaa7f69135b250ccdd3216842928c9e5811b146943cb612830c4d06243090b6ea028e2822d0c894063555dc3af55ba8600bce5e182011bef6194a9222fd4fba
   languageName: node
   linkType: hard
 
