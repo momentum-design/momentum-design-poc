@@ -1,5 +1,5 @@
 import { LitElement } from 'lit';
 
-class Provider extends LitElement {
+export default class Provider extends LitElement {
 
 }
