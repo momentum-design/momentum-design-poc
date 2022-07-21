@@ -3,8 +3,14 @@
   "packageManager": "yarn@3.2.1",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/**/*"
   ],
+  "scripts": {
+    "assets-tokens": "yarn workspace @momentum-design/assets-tokens",
+    "assets-illustrations": "yarn workspace @momentum-design/assets-illustrations",
+    "assets-icons": "yarn workspace @momentum-design/assets-icons",
+    "components-provider": "yarn workspace @momentum-design/components-provider"
+  },
   "devDependencies": {
     "eslint": "^8.20.0",
     "prettier": "^2.7.1",
