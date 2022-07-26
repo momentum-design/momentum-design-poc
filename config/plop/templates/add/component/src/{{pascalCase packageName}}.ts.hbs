@@ -1,0 +1,21 @@
+import {html, LitElement} from 'lit';
+import {customElement} from 'lit/decorators.js';
+
+import styles from './styles.css.js';
+
+@customElement('md-{{kebabCase packageName}}')
+class {{pascalCase packageName}} extends LitElement {
+  static override styles = styles;
+
+  public override render() {
+    return html``;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'md-{{kebabCase packageName}}': {{pascalCase packageName}};
+  }
+}
+
+export default {{pascalCase packageName}};

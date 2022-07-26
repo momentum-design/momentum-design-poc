@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    // Required
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+  },
+  "exclude": [
+    "./templates"
+  ]
+}

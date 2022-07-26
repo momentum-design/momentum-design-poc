@@ -1,0 +1,30 @@
+{
+  "name": "@momentum-design/{{kebabCase packageName}}",
+  "packageManager": "yarn@3.2.1",
+  "files": [
+    "./dist/esm/*"
+  ],
+  "main": "./dist/module/index.js",
+  "module": "./dist/module/index.js",
+  "type": "module",
+  "types": "./dist/module/index.d.ts",
+  "scripts": {
+    "start": "echo \"no script initialized\"",
+    "test": "echo \"no script initialized\"",
+    "build": "yarn build:module && yarn build:browser",
+    "build:module": "tsc",
+    "build:browser": "node ./esbuild.config.js",
+    "clean": "yarn clean:module && yarn clean:browser",
+    "clean:module": "rimraf ./dist/module",
+    "clean:browser": "rimraf ./dist/browser"
+  },
+  "dependencies": {
+    "lit": "^2.2.7",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.49",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
