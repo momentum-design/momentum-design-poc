@@ -77,18 +77,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@momentum-design/tester-component@workspace:packages/components/TesterComponent":
-  version: 0.0.0-use.local
-  resolution: "@momentum-design/tester-component@workspace:packages/components/TesterComponent"
-  dependencies:
-    esbuild: ^0.14.49
-    lit: ^2.2.7
-    rimraf: ^3.0.2
-    tslib: ^2.4.0
-    typescript: ^4.7.4
-  languageName: unknown
-  linkType: soft
-
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1728,6 +1716,7 @@ __metadata:
     eslint: ^8.20.0
     plop: ^3.1.1
     prettier: ^2.7.1
+    rimraf: ^3.0.2
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
