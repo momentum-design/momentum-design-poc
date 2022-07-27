@@ -1,6 +1,6 @@
-import {NodePlopAPI} from 'plop';
-import {ComponentGenerator} from './generators/component.js';
+import { NodePlopAPI } from 'plop';
+import { ComponentGenerator } from './generators/component';
 
-export default function (plop: NodePlopAPI) {
+export default (plop: NodePlopAPI) => {
   plop.setGenerator(ComponentGenerator.name, ComponentGenerator.generator);
 };

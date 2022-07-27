@@ -1,7 +1,9 @@
-import {html, LitElement} from 'lit';
-import {customElement} from 'lit/decorators.js';
+import { html, LitElement } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
-import styles from './styles.css.js';
+import * as CONSTANTS from './constants.ts'
+
+import styles from './styles.css';
 
 @customElement('md-{{kebabCase packageName}}')
 class {{pascalCase packageName}} extends LitElement {
@@ -9,6 +11,10 @@ class {{pascalCase packageName}} extends LitElement {
 
   public override render() {
     return html``;
+  }
+
+  public static get CONSTANTS(): typeof CONSTANTS {
+    return { ...CONSTANTS };
   }
 }
 

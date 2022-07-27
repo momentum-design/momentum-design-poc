@@ -1,23 +1,22 @@
-import { PlopGeneratorConfig } from "plop";
+import { PlopGeneratorConfig } from 'plop';
 
-import { GENERATOR_NAME } from './../constants/index.js';
-import { AddComponent } from "../actions/AddComponent.js";
-import { packageName, PROMPT_TYPE } from "../constants/index.js";
-import { prompt } from '../prompts/index.js';
-import { ModifyPackageJsonAddPackage } from "../actions/ModifyPackageJsonAddPackage.js";
+import { GENERATOR_NAME, packageName, PROMPT_TYPE } from '../constants';
+import { AddComponent } from '../actions/AddComponent';
+import { prompt } from '../prompts';
+import { ModifyPackageJsonAddPackage } from '../actions/ModifyPackageJsonAddPackage';
 
 const generator: Partial<PlopGeneratorConfig> = {
   description: 'Scaffold a new component package',
   prompts: [
-    prompt(`${packageName}`, `${packageName} of the component`, PROMPT_TYPE.INPUT)
+    prompt(`${packageName}`, `${packageName} of the component`, PROMPT_TYPE.INPUT),
   ],
   actions: [
     AddComponent,
-    ModifyPackageJsonAddPackage
-  ]
-}
+    ModifyPackageJsonAddPackage,
+  ],
+};
 
 export const ComponentGenerator = {
   name: GENERATOR_NAME.COMPONENT,
   generator,
-}
+};
