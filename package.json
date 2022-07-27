@@ -14,10 +14,20 @@
     "assets-tokens": "yarn workspace @momentum-design/assets-tokens",
     "assets-illustrations": "yarn workspace @momentum-design/assets-illustrations",
     "assets-icons": "yarn workspace @momentum-design/assets-icons",
-    "components-provider": "yarn workspace @momentum-design/components-provider"
+    "components-provider": "yarn workspace @momentum-design/components-provider",
+    "analyze": "yarn analyze:components && yarn analyze:assets && yarn analyze:config",
+    "analyze:assets": "yarn workspaces foreach --verbose --parallel --include \"@momentum-design/assets-*\" run analyze",
+    "analyze:components": "yarn workspaces foreach --verbose --parallel --include \"@momentum-design/components-*\" run analyze",
+    "analyze:config": "eslint \"./config/**\""
   },
   "devDependencies": {
-    "eslint": "^8.20.0",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "esbuild": "^0.14.50",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-json": "^3.1.0",
     "plop": "^3.1.1",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",

@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node"
   },
   "exclude": [
     "./templates"

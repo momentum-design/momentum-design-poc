@@ -1,9 +1,4 @@
-import {join} from 'path';
-
-export const root: string = process.cwd();
-export const plop: string = `${join(root, 'config', 'plop')}`;
-
-export const packageName: string = 'packageName';
+import { join } from 'path';
 
 export enum PROMPT_TYPE {
   INPUT = 'input',
@@ -11,11 +6,6 @@ export enum PROMPT_TYPE {
 
 export enum GENERATOR_NAME {
   COMPONENT = 'component',
-}
-
-export const folders = {
-  templates: `${join(plop, 'templates')}`,
-  components: `${join(root, 'packages', 'components')}`,
 }
 
 export enum ACTION {
@@ -30,3 +20,12 @@ export enum TYPE {
 export enum FILE_TYPE {
   DEFAULT = 'hbs',
 }
+
+export const packageName: string = 'packageName';
+export const root: string = process.cwd();
+export const plop: string = `${join(root, 'config', 'plop')}`;
+
+export const folders = {
+  templates: `${join(plop, 'templates')}`,
+  components: `${join(root, 'packages', 'components')}`,
+};

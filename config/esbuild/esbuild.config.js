@@ -1,23 +1,25 @@
 import esbuild from 'esbuild';
-import {join} from 'path';
+import { join } from 'path';
 
-const component = async () => {
+import { PROJECT_PREFIX } from './esbuild.constants.js';
+
+const iife = async ({ category }) => {
   const projectPath = process.cwd();
-  
+
   await esbuild.build({
     bundle: true,
     entryPoints: [`${join(projectPath, 'src', 'index.js')}`],
     format: 'iife',
-    globalName: 'MomentumDesign.components',
+    globalName: `${PROJECT_PREFIX}${category ? `.${category}` : ''}`,
     minify: true,
     sourcemap: true,
     outfile: `${join(projectPath, 'dist', 'browser', 'index.js')}`,
-  });  
-}
+  });
+};
 
 const plop = async () => {
   const projectPath = `${join(process.cwd(), 'config', 'plop')}`;
-  
+
   await esbuild.build({
     bundle: true,
     entryPoints: [`${join(projectPath, 'plopfile.ts')}`],
@@ -26,10 +28,10 @@ const plop = async () => {
     outfile: `${join(projectPath, 'dist', 'plopfile.js')}`,
     tsconfig: `${join(projectPath, 'tsconfig.plop.json')}`,
     platform: 'node',
-  }); 
-}
+  });
+};
 
 export {
-  component,
-  plop
+  iife,
+  plop,
 };

@@ -1,3 +1,4 @@
-import { component } from '../../../config/esbuild/esbuild.config.js';
+import { iife } from '../../../config/esbuild/esbuild.config.js';
+import { CATEGORIES } from '../../../config/esbuild/esbuild.constants.js';
 
-component();
+iife({ category: CATEGORIES.COMPONENTS });

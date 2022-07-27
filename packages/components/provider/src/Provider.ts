@@ -1,5 +1,7 @@
-import {html, css, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { html, css, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+
+import * as CONSTANTS from './constants';
 
 @customElement('md-provider')
 class Provider extends LitElement {
@@ -12,10 +14,8 @@ class Provider extends LitElement {
     return html`<p>Hello, ${this.name}!</p>`;
   }
 
-  public static get CONSTANTS() {
-    return {
-      value: 'value'
-    };
+  public static get CONSTANTS(): typeof CONSTANTS {
+    return { ...CONSTANTS };
   }
 }
 

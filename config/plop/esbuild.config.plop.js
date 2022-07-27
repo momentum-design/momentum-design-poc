@@ -1,3 +1,3 @@
-import { plop } from '../esbuild/esbuild.config.js';
+import { plop } from '../esbuild/esbuild.config';
 
 plop();
