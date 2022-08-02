@@ -20,7 +20,7 @@
     "clean": "yarn clean:module && yarn clean:browser",
     "clean:module": "rimraf ./dist/module",
     "clean:browser": "rimraf ./dist/browser",
-    "docs:analyze": "custom-elements-manifest analyze --litelement --globs 'src/index.ts'"
+    "docs:analyze": "custom-elements-manifest analyze --litelement --globs 'src/index.ts' --outdir ../../docs/generated/components/provider"
   },
   "dependencies": {
     "lit": "^2.2.7",

@@ -6,7 +6,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [// Enable Preact to support Preact JSX components.
+  integrations: [
   preact(), lit(), mdx()],
-  site: `http://astro.build`
+  site: `https://momentum.design`
 });
