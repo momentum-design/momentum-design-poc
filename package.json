@@ -11,6 +11,7 @@
     "build:plop": "yarn clean:plop && node ./config/plop/esbuild.config.plop.js",
     "generate:plop": "yarn build:plop && plop --plopfile config/plop/dist/plopfile.js",
     "generate": "yarn build:plop && yarn generate:plop && yarn install",
+    "docs": "yarn workspace @momentum-design/docs",
     "assets-tokens": "yarn workspace @momentum-design/assets-tokens",
     "assets-illustrations": "yarn workspace @momentum-design/assets-illustrations",
     "assets-icons": "yarn workspace @momentum-design/assets-icons",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@custom-elements-manifest/analyzer": "^0.6.3",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "commitizen": "^4.2.5",

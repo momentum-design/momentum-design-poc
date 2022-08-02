@@ -1,0 +1,23 @@
+{
+  "name": "@momentum-design/docs",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "preact": "^10.7.3"
+  },
+  "devDependencies": {
+    "@astrojs/lit": "^0.3.2",
+    "@astrojs/mdx": "^0.4.0",
+    "@astrojs/preact": "^0.5.2",
+    "@webcomponents/template-shadowroot": "^0.1.0",
+    "astro": "^1.0.0-rc.3",
+    "lit": "^2.1.3"
+  }
+}

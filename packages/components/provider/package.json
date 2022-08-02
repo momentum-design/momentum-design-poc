@@ -19,13 +19,15 @@
     "build:browser": "node ./esbuild.config.js",
     "clean": "yarn clean:module && yarn clean:browser",
     "clean:module": "rimraf ./dist/module",
-    "clean:browser": "rimraf ./dist/browser"
+    "clean:browser": "rimraf ./dist/browser",
+    "docs:analyze": "custom-elements-manifest analyze --litelement --globs 'src/index.ts'"
   },
   "dependencies": {
     "lit": "^2.2.7",
     "tslib": "^2.4.0"
   },
   "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.6.3",
     "esbuild": "^0.14.49",
     "eslint-plugin-lit": "^1.6.1",
     "rimraf": "^3.0.2",
