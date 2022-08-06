@@ -1,8 +1,18 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
-import '../../../../components/provider/src/index.ts';
+import '@momentum-design/components-provider/src';
+import * as r from '../../../../components/provider/README.md';
+const rd = await r.compiledContent();
+import {render} from '../../utils/custom-elements';
+import data from '../../../generated/components/provider/custom-elements.json';
 ---
 
-<MainLayout content={{astro: {headings: []}}}>
-  <md-provider></md-provider>
+<MainLayout>
+  <Fragment set:html={rd}></Fragment>
+  <h3>--- See it in action ---</h3>
+  <div class="demo-container">
+    <md-provider></md-provider>
+  </div>
+  <Fragment set:html={render(data)}></Fragment>
 </MainLayout>
+

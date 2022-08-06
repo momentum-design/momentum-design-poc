@@ -377,6 +377,11 @@ h2.heading {
 	white-space: normal;
 }
 
+.demo-container {
+	border: 2px solid var(--theme-selection-color);
+	padding: 10px;
+}
+
 :target {
 	scroll-margin: calc(var(--theme-sidebar-offset, 5rem) + 2rem) 0 2rem;
 }
