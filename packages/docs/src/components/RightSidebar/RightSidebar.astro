@@ -2,13 +2,11 @@
 import TableOfContents from "./TableOfContents.tsx";
 import MoreMenu from "./MoreMenu.astro";
 const { content, githubEditUrl } = Astro.props;
-const headings = content.astro ? content.astro.headings : [];
-console.log(content);
 ---
 
 <nav class="sidebar-nav" aria-labelledby="grid-right">
 	<div class="sidebar-nav-inner">
-		<TableOfContents client:media="(min-width: 50em)" {headings} />
+		<TableOfContents client:media="(min-width: 50em)" headings={content.headings} />
 		<MoreMenu editHref={githubEditUrl} />
 	</div>
 </nav>

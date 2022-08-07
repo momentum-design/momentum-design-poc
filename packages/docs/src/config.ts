@@ -1,3 +1,5 @@
+import { CUSTOM_TAGS } from "./utils/types";
+
 export const SITE = {
 	title: 'Documentation',
 	description: 'Your website description.',
@@ -28,13 +30,13 @@ export const GITHUB_EDIT_URL = `https://github.com/momentum-design/momentum-desi
 export const SIDEBAR = {
 	en: [
 		{ text: '', header: true },
-		{ text: 'Section Header', header: true },
+		{ text: 'Momentum Design', header: true },
 		{ text: 'Introduction', link: 'en/introduction' },
-		{ text: 'Page 2', link: 'en/page-2' },
-		{ text: 'Page 3', link: 'en/page-3' },
-		{ text: 'Another Section', header: true },
-		{ text: 'Page 4', link: 'en/page-4' },
-		{ text: 'element', link: 'en/element'},
-		{ text: 'elemental', link: 'en/elemental'},
+		{ text: 'Components', header: true },
+		// start auto-generated component docs 
+		{ text: CUSTOM_TAGS.PROVIDER, link: `en/components/${CUSTOM_TAGS.PROVIDER}`},
+		{ text: CUSTOM_TAGS.TEST, link: `en/components/${CUSTOM_TAGS.TEST}`},
+		// end auto-generated component docs
+		{ text: 'Assets', header: true },
 	],
 };

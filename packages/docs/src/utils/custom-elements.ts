@@ -1,4 +1,4 @@
-export const render = (manifest) => {
+export const extract = (manifest) => {
   const elements = manifest.modules.reduce(
     (els, module) =>
       els.concat(
@@ -6,12 +6,28 @@ export const render = (manifest) => {
       ),
     []
   );
+  return elements;
+}
+
+export const code = (manifest) => {
+  const elements = extract(manifest);
   return `
-   <h1>API Reference</h1>
    ${elements
      .map(
        (element) => `
-     <h2>&lt;${element.tagName}></h2>
+          <${element.tagName} ${element.attributes
+            .map((attribute) =>
+              `${attribute.name}="${attribute.type.text}"`)}></${element.tagName}>
+ `)}`;
+     };
+
+export const table = (manifest) => {
+  const elements = extract(manifest);
+  return `
+   ${elements
+     .map(
+       (element) => `
+     <h3 id="tag-name">&lt;${element.tagName}></h3>
      <div>
        ${element.description}
      </div>
@@ -85,7 +101,7 @@ export const renderTable = (name, properties, data) => {
     return '';
   }
   return `
-   ${name ? `<h3>${name}</h3>` : ''}
+   ${name ? `<h3 id=${name.toLowerCase()}>${name}</h3>` : ''}
    <table>
      <tr>
        ${properties

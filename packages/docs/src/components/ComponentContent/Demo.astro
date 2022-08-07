@@ -1,0 +1,9 @@
+---
+import RenderTag from './RenderTag.astro';
+const { tag } = Astro.props;
+---
+
+<h2 id="demo">Demo</h2>
+<section class="demo-container" id="demo">
+  <RenderTag tag={tag}></RenderTag>
+</section>

@@ -1,0 +1,12 @@
+---
+import { code } from '../../utils/custom-elements';
+import { Code } from 'astro/components';
+
+const { manifest, language } = Astro.props;
+
+---
+
+<h2 id="example">Example</h2>
+<Code
+  code={`${code(manifest)}`} lang={language} >
+</Code>

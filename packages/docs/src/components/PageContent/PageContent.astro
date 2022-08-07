@@ -4,17 +4,16 @@ import TableOfContents from "../RightSidebar/TableOfContents.tsx";
 
 const { content, githubEditUrl } = Astro.props;
 const title = content.title;
-const headings = content.astro ? content.astro.headings : [];
-console.log(content);
 ---
-
 <article id="article" class="content">
 	<section class="main-section">
 		<h1 class="content-title" id="overview">{title}</h1>
 		<nav class="block sm:hidden">
-			<TableOfContents client:media="(max-width: 50em)" {headings} />
+			<TableOfContents client:media="(max-width: 50em)" headings={content.headings} />
 		</nav>
-		<slot />
+		<section id="slotted-content">
+			<slot />
+		</section>
 	</section>
 	<nav class="block sm:hidden">
 		<MoreMenu editHref={githubEditUrl} />

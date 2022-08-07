@@ -1,0 +1,15 @@
+---
+import Content from '../../../components/ComponentContent/Content.astro';
+import { CUSTOM_TAGS } from '../../../utils/types';
+export async function getStaticPaths() {
+  return [
+    { params: { tag: CUSTOM_TAGS.PROVIDER } },
+    { params: { tag: CUSTOM_TAGS.TEST } },
+  ];
+}
+const { tag } = Astro.params;
+---
+
+<Content tag={tag} />
+
+

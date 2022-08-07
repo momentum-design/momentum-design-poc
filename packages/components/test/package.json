@@ -1,5 +1,5 @@
 {
-  "name": "@momentum-design/components-provider",
+  "name": "@momentum-design/test",
   "packageManager": "yarn@3.2.1",
   "files": [
     "./dist/module/*"

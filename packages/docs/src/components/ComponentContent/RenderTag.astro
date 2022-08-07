@@ -1,0 +1,19 @@
+---
+// start component source imports
+import '@momentum-design/components-provider/src';
+import '@momentum-design/test/src';
+// end component source imports
+
+import { CUSTOM_TAGS } from '../../utils/types';
+const { tag } = Astro.props;
+---
+{(() => {
+  // TODO: auto generate a component and just pass tag through
+  // to a render component that then adds the tag specified component 
+  // and attaches to shadow
+  switch (tag) {
+    case CUSTOM_TAGS.TEST: return <md-test client:load></md-test>;
+    case CUSTOM_TAGS.PROVIDER: return <md-provider client:load></md-provider>;
+    default: return null
+  }
+})()}
