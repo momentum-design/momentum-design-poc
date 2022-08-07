@@ -16,7 +16,7 @@ const constant = (string) => {
 const generateAstroTags = (data) => {
   return Object.keys(data.docsMetadata).map((key) => {
     if (key) {
-      return `\t\t{ text: CUSTOM_TAGS.${constant(key)}, link: \`en/components\${CUSTOM_TAGS.${constant(key)}}\`},`
+      return `\t\t{ text: CUSTOM_TAGS.${constant(key)}, link: \`en/components/\${CUSTOM_TAGS.${constant(key)}}\`},`
     }
   }).join('\n');
 }
