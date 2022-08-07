@@ -1,6 +1,5 @@
 {
   "docsMetadata": {
-    "components-provider": "md-provider",
-    "test": "md-test"
+    "components-provider": "md-provider"
   }
 }

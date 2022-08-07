@@ -6,6 +6,7 @@ export enum PROMPT_TYPE {
 
 export enum GENERATOR_NAME {
   COMPONENT = 'component',
+  DOCS = 'docs',
 }
 
 export enum ACTION {

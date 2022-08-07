@@ -11,9 +11,10 @@ const { tag } = Astro.props;
   // TODO: auto generate a component and just pass tag through
   // to a render component that then adds the tag specified component 
   // and attaches to shadow
+  // NOTE: THIS SWITCH STATEMENT IS USED AS A REGEX
+  // WITH config/plop/actions/modifyRenderTagAstro.ts
   switch (tag) {
-    case CUSTOM_TAGS.TEST: return <md-test client:load></md-test>;
-    case CUSTOM_TAGS.COMPONENTS_PROVIDER: return <md-provider client:load></md-provider>;
-    default: return null
+		case CUSTOM_TAGS.COMPONENTS_PROVIDER: return <md-provider client:load></md-provider>;
+    default: return null;
   }
 })()}

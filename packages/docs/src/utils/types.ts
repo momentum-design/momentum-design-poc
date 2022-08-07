@@ -1,4 +1,7 @@
+
+// note: this enum was modified by a plop script
+// config/plop/actions/modifyCustomTagsTypesEnumAstro.ts
+// using a regex
 export enum CUSTOM_TAGS {
-  TEST = 'md-test',
-  COMPONENTS_PROVIDER = 'md-provider',
+	COMPONENTS_PROVIDER = 'md-provider',
 }
