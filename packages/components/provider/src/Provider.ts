@@ -19,4 +19,6 @@ class Provider extends LitElement {
   }
 }
 
+customElements.define('md-provider', Provider);
+
 export default Provider;

@@ -1,0 +1,17 @@
+---
+import Content from '../../../components/ComponentContent/Content.astro';
+import { CUSTOM_TAGS } from '../../../utils/types';
+// note: this function was generated/altered
+// by a plop script with regex
+// config/plop/actions/modifyTagFileAstro.ts
+export async function getStaticPaths() {
+	return [
+		{ params: { tag: CUSTOM_TAGS.COMPONENTS_PROVIDER } },
+	];
+}
+const { tag } = Astro.params;
+---
+
+<Content tag={tag} />
+
+

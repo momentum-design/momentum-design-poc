@@ -1,0 +1,35 @@
+---
+import { extract } from '../../utils/custom-elements';
+import ApiReference from './ApiReference.astro';
+import Demo from './Demo.astro';
+import Example from './Example.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const { tag } = Astro.props;
+
+// TODO: would be nice to have variable based imports and not have to import everything and then filter down
+// vite does not support: https://docs.astro.build/en/guides/troubleshooting/#supported-values
+const readMes = await Astro.glob('../../../../components/**/*.md');
+const manifests = await Astro.glob('../../../generated/@momentum-design/**/*.json');
+const readMe = await readMes.find((readme) => readme.frontmatter.component === tag);
+const rContent = await readMe.compiledContent();
+const data = manifests.find((manifest) => extract(manifest).find((element) => element.tagName === tag))
+---
+
+<!-- TODO: Figure out how to handle mixed headings with Astro + Markdown files
+Markdown files have headings automatically, other component files do not
+-->
+<MainLayout content={
+  {headings: [
+    ...(await readMe.getHeadings()),
+    ...[
+      {slug: 'example', text: 'Example', depth: 1},
+      {slug: 'demo', text: 'Demo', depth: 1},
+      {slug: 'api-reference', text: 'Api Reference', depth: 1}
+      ]
+  ], title: tag}}>
+  <Fragment set:html={rContent}></Fragment>
+  <Example manifest={data} language="js"></Example>
+  <Demo tag={tag}></Demo>
+  <ApiReference manifest={data}></ApiReference>
+</MainLayout>

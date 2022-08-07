@@ -10,17 +10,20 @@
     "clean:plop": "rimraf ./config/plop/dist",
     "build:plop": "yarn clean:plop && node ./config/plop/esbuild.config.plop.js",
     "generate:plop": "yarn build:plop && plop --plopfile config/plop/dist/plopfile.js",
-    "generate": "yarn build:plop && yarn generate:plop && yarn install",
-    "assets-tokens": "yarn workspace @momentum-design/assets-tokens",
-    "assets-illustrations": "yarn workspace @momentum-design/assets-illustrations",
-    "assets-icons": "yarn workspace @momentum-design/assets-icons",
-    "components-provider": "yarn workspace @momentum-design/components-provider",
+    "generate": "yarn generate:plop && yarn install",
     "analyze": "yarn analyze:components && yarn analyze:assets && yarn analyze:config",
     "analyze:assets": "yarn workspaces foreach --verbose --parallel --include \"@momentum-design/assets-*\" run analyze",
     "analyze:components": "yarn workspaces foreach --verbose --parallel --include \"@momentum-design/components-*\" run analyze",
     "analyze:config": "eslint \"./config/**\"",
     "postinstall": "husky install ./config/husky",
-    "git:commit": "cz"
+    "git:commit": "cz",
+    "docs:analyze": "yarn workspaces foreach run docs:analyze",
+    "docs:generate": "yarn docs:analyze && yarn generate:plop docs",
+    "docs": "yarn workspace @momentum-design/docs",
+    "assets-tokens": "yarn workspace @momentum-design/assets-tokens",
+    "assets-illustrations": "yarn workspace @momentum-design/assets-illustrations",
+    "assets-icons": "yarn workspace @momentum-design/assets-icons",
+    "components-provider": "yarn workspace @momentum-design/components-provider"
   },
   "config": {
     "commitizen": {
@@ -30,6 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@custom-elements-manifest/analyzer": "^0.6.3",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "commitizen": "^4.2.5",

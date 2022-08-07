@@ -1,0 +1,10 @@
+---
+
+import { table } from '../../utils/custom-elements';
+
+const { manifest } = Astro.props;
+
+---
+
+<h2 id="api-reference">API Reference</h2>
+<Fragment set:html={table(manifest)}></Fragment>
