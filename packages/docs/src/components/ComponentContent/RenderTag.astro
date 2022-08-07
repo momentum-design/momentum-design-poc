@@ -13,7 +13,7 @@ const { tag } = Astro.props;
   // and attaches to shadow
   switch (tag) {
     case CUSTOM_TAGS.TEST: return <md-test client:load></md-test>;
-    case CUSTOM_TAGS.PROVIDER: return <md-provider client:load></md-provider>;
+    case CUSTOM_TAGS.COMPONENTS_PROVIDER: return <md-provider client:load></md-provider>;
     default: return null
   }
 })()}

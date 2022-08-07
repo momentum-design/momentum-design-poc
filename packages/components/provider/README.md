@@ -1,6 +1,5 @@
 ---
 component: md-provider
-path: ../../../../components/provider/src/index.ts
 ---
 # Provider
 

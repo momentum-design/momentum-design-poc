@@ -1,4 +1,4 @@
 export enum CUSTOM_TAGS {
   TEST = 'md-test',
-  PROVIDER = 'md-provider',
+  COMPONENTS_PROVIDER = 'md-provider',
 }

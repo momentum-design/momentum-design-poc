@@ -1,6 +1,5 @@
 ---
 component: md-test
-path: ../../../../components/test/src/index.ts
 ---
 # Test
 
