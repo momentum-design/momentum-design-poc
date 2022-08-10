@@ -1,11 +1,11 @@
-import {{pascalCase packageName}} from '../src/index.js';
+import { {{pascalCase packageName}} } from '../src/index.js';
 
 import {fixture, assert} from '@open-wc/testing';
 import {html} from 'lit/static-html.js';
 
 suite('md-{{kebabCase packageName}}', () => {
   test('is defined', () => {
-    const el = document.createElement('{{kebabCase packageName}}');
+    const el = document.createElement('md-{{kebabCase packageName}}');
     assert.instanceOf(el, {{pascalCase packageName}});
   });
 
