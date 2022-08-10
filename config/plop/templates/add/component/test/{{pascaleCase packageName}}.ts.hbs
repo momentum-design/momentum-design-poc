@@ -1,0 +1,19 @@
+import {{pascalCase packageName}} from '../src/index.js';
+
+import {fixture, assert} from '@open-wc/testing';
+import {html} from 'lit/static-html.js';
+
+suite('md-{{kebabCase packageName}}', () => {
+  test('is defined', () => {
+    const el = document.createElement('{{kebabCase packageName}}');
+    assert.instanceOf(el, {{pascalCase packageName}});
+  });
+
+  test('renders with default values', async () => {
+    const el = await fixture(html`<md-{{kebabCase packageName}}></md-{{kebabCase packageName}}>`);
+    assert.shadowDom.equal(
+      el,
+      ``
+    );
+  });
+});

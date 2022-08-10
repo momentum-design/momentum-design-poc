@@ -7,6 +7,7 @@
     "packages/**/*"
   ],
   "scripts": {
+    "test": "yarn workspaces foreach run test",
     "clean:plop": "rimraf ./config/plop/dist",
     "build:plop": "yarn clean:plop && node ./config/plop/esbuild.config.plop.js",
     "generate:plop": "yarn build:plop && plop --plopfile config/plop/dist/plopfile.js",
@@ -30,8 +31,12 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@open-wc/testing": "^3.1.6",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "@web/dev-server-legacy": "^1.0.1",
+    "@web/test-runner": "^0.14.0",
+    "@web/test-runner-playwright": "^0.8.10",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "3.3.0",
     "esbuild": "^0.14.50",
