@@ -10,7 +10,7 @@
   "types": "./dist/module/index.d.ts",
   "scripts": {
     "start": "echo \"no script initialized\"",
-    "test": "echo \"no script initialized\"",
+    "test": "yarn build:module && web-test-runner --config=../../../config/test/web-test-runner/web-test-runner.config.js",
     "analyze": "yarn analyze:lint && yarn analyze:syntax",
     "analyze:lint": "eslint \"./src/**\"",
     "analyze:syntax": "tsc --noEmit",
@@ -26,6 +26,10 @@
     "tslib": "^2.4.0"
   },
   "devDependencies": {
+    "@open-wc/testing": "^3.1.6",
+    "@web/dev-server-legacy": "^1.0.1",
+    "@web/test-runner": "^0.14.0",
+    "@web/test-runner-playwright": "^0.8.10",
     "esbuild": "^0.14.49",
     "eslint-plugin-lit": "^1.6.1",
     "rimraf": "^3.0.2",
